@@ -104,25 +104,51 @@ import random
 # Ir aritmetinį vidurkį atmetus tas reikšmes,
 # kurios yra mažesnės nei 10 arba didesnės nei 90. Abu vidurkius atspausdinkite. Rezultatus apvalinkite iki sveiko skaičiaus.
 
-a = random.randint(0,100)
-b = random.randint(0,100)
-c = random.randint(0,100)
+# a = random.randint(0,100)
+# b = random.randint(0,100)
+# c = random.randint(0,100)
+#
+# average = round((a+b+c)/3)
+# print(f'aritmetinis vidurkis: ',average)
+#
+# if 10<= a <= 90 & 10<= b <= 90 & 10<= c <= 90:
+#     print(round((a+b+c)/3))
+# elif 10<= a <= 90 & 10<= b <= 90 & (10>= c >= 90):
+#     print(round((a+b)/2))
+# elif 10<= a <= 90 & (10>= b >= 90) & (10<= c <= 90):
+#     print(round((a+c)/2))
+# elif 10>= a >= 90 & (10<= b <= 90) & (10<= c <= 90):
+#     print(round((b+c)/2))
+# elif 10<= a <= 90 & 10>= b >= 90 & 10>= c >= 90:
+#     print(round((a)))
+# elif 10>= a >= 90 & 10<= b <= 90 & 10>= c >= 90:
+#     print(round((b)))
+# elif 10>= a >= 90 & 10>= b >= 90 & 10<= c <= 90:
+#     print(round((c)))
 
-average = round((a+b+c)/3)
-print(f'aritmetinis vidurkis: ',average)
+# 9 Padarykite skaitmeninį laikrodį, rodantį valandas, minutes ir sekundes. Valandom, minutėm ir sekundėm sugeneruoti panaudokite funkciją random.randint(x,x).
+# Sugeneruokite skaičių nuo 0 iki 300.
+# Tai papildomos sekundės. Skaičių pridėkite prie jau sugeneruoto laiko. Atspausdinkite laikrodį prieš ir po sekundžių pridėjimo ir pridedamų sekundžių skaičių.
 
-if 10<= a <= 90 & 10<= b <= 90 & 10<= c <= 90:
-    print(round((a+b+c)/3))
-elif 10<= a <= 90 & 10<= b <= 90 & (10>= c >= 90):
-    print(round((a+b)/2))
-elif 10<= a <= 90 & (10>= b >= 90) & (10<= c <= 90):
-    print(round((a+c)/2))
-elif 10>= a >= 90 & (10<= b <= 90) & (10<= c <= 90):
-    print(round((b+c)/2))
-elif 10<= a <= 90 & 10>= b >= 90 & 10>= c >= 90:
-    print(round((a)))
-elif 10>= a >= 90 & 10<= b <= 90 & 10>= c >= 90:
-    print(round((b)))
-elif 10>= a >= 90 & 10>= b >= 90 & 10<= c <= 90:
-    print(round((c)))
+hours = random.randint(0,23)
+minutes = random.randint(0,59)
+seconds = random.randint(0,59)
+generated = random.randint(0,300)
+print(f' prideta sekundziu', generated)
+print(hours,f':',minutes,f':',seconds)
+
+seconds += generated
+
+if seconds > 59:
+    minutes += seconds // 60
+    seconds = seconds % 60
+
+if minutes > 59:
+    hours += minutes // 60
+    minutes = minutes % 60
+
+if hours > 23:
+    hours = hours % 24
+print(f'naujas laikas',hours,f':',minutes,f':',seconds )
+
 
