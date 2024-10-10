@@ -111,5 +111,18 @@ c = random.randint(0,100)
 average = round((a+b+c)/3)
 print(f'aritmetinis vidurkis: ',average)
 
-
+if 10<= a <= 90 & 10<= b <= 90 & 10<= c <= 90:
+    print(round((a+b+c)/3))
+elif 10<= a <= 90 & 10<= b <= 90 & (10>= c >= 90):
+    print(round((a+b)/2))
+elif 10<= a <= 90 & (10>= b >= 90) & (10<= c <= 90):
+    print(round((a+c)/2))
+elif 10>= a >= 90 & (10<= b <= 90) & (10<= c <= 90):
+    print(round((b+c)/2))
+elif 10<= a <= 90 & 10>= b >= 90 & 10>= c >= 90:
+    print(round((a)))
+elif 10>= a >= 90 & 10<= b <= 90 & 10>= c >= 90:
+    print(round((b)))
+elif 10>= a >= 90 & 10>= b >= 90 & 10<= c <= 90:
+    print(round((c)))
 
