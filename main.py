@@ -37,8 +37,11 @@ import random
 # a = random.randint(1,10)
 # b = random.randint(1,10)
 # c = random.randint(1,10)
-
-# visada gausis trikampis???? whats the point tikrinti?
+#
+# if a+b>c and a+c> b and b+c>a:
+#     print('gaunasi trikampis')
+# else:
+#     print('neiseina trikampis')
 
 # 5 Sukurkite keturis kintamuosius ir ​random.randint(x,x)​ funkcija sugeneruokite jiems reikšmes nuo 0 iki 2.
 # Suskaičiuokite kiek yra nulių, vienetų ir dvejetų. (sprendimui masyvo nenaudoti).
@@ -130,25 +133,25 @@ import random
 # Sugeneruokite skaičių nuo 0 iki 300.
 # Tai papildomos sekundės. Skaičių pridėkite prie jau sugeneruoto laiko. Atspausdinkite laikrodį prieš ir po sekundžių pridėjimo ir pridedamų sekundžių skaičių.
 
-hours = random.randint(0,23)
-minutes = random.randint(0,59)
-seconds = random.randint(0,59)
-generated = random.randint(0,300)
-print(f' prideta sekundziu', generated)
-print(hours,f':',minutes,f':',seconds)
-
-seconds += generated
-
-if seconds > 59:
-    minutes += seconds // 60
-    seconds = seconds % 60
-
-if minutes > 59:
-    hours += minutes // 60
-    minutes = minutes % 60
-
-if hours > 23:
-    hours = hours % 24
-print(f'naujas laikas',hours,f':',minutes,f':',seconds )
+# hours = random.randint(0,23)
+# minutes = random.randint(0,59)
+# seconds = random.randint(0,59)
+# generated = random.randint(0,300)
+# print(f' prideta sekundziu', generated)
+# print(hours,f':',minutes,f':',seconds)
+#
+# seconds += generated
+#
+# if seconds > 59:
+#     minutes += seconds // 60
+#     seconds = seconds % 60
+#
+# if minutes > 59:
+#     hours += minutes // 60
+#     minutes = minutes % 60
+#
+# if hours > 23:
+#     hours = hours % 24
+# print(f'naujas laikas',hours,f':',minutes,f':',seconds )
 
 
